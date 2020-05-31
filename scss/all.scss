@@ -1,0 +1,144 @@
+@import "../base/reset";
+@import "../utils/helpers";
+body {
+    font-family: 'Roboto', PingFang TC,sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+}
+.text-light {
+    color: #fff;
+}
+h1 {
+    padding: 48px 0 24px 0;
+    font-size: 80px;
+    line-height: 90px;
+    border-bottom: 1px solid #000;
+}
+.title {
+    font-size: 32px;
+    line-height: 45px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+    small {
+        font-size: 24px;
+        line-height: 32px;
+        color: #a00404;
+    }
+    &__light {
+        color: #fff;
+        font-size: 32px;
+        line-height: 45px;
+        font-weight: bold;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #fff;
+        small {
+            color: #fff;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+}
+.subtitle{
+    font-weight: bold;
+}
+.profile {
+    &__list {
+        margin-left: 32px; //滿版寬1920，置中1200，計算後為32
+        li:first-child::before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: -32px;
+            top: 10px;
+            border-radius: 50%;
+            background: #96a9c4;
+        }
+    }
+}
+
+.education {
+    &__list {
+        margin-left: 32px;
+        li::before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #96a9c4;
+            left: -32px;
+        }
+        li:first-child::before {
+            top: 10px;
+        }
+        li:last-child::before {
+            bottom: 10px;
+        }
+        .timeline::after {
+            content: "";
+            position: absolute;
+            border-left: 1px solid #96a9c4;
+            height: 80%;
+            left: -24px;
+            top: 10px;
+        }
+    }
+}
+
+.skills {
+    &:after {
+        content: "";
+        position: absolute;
+        background: #96a9c4;
+        z-index: -1;
+        height: 360px;
+        right: 0;
+        left: 0;
+        top: 85px;
+    }
+    &__bg {
+        background: #415165;
+        padding: 64px 0 56px 0;
+    }
+    &__list {
+        width: 996px;
+        margin: 0 auto;
+
+        .title__light {
+            width: 100%;
+            text-align: center;
+        }
+        .skill {
+            color: #fff;
+            border-left: 1px solid #fff;
+            padding-left: 24px;
+        }
+    }
+}
+.work {
+    .title {
+        margin-bottom: 22px;
+    }
+    &__list {
+        padding-left: 24px;
+        margin-left: 24px;
+        border-left: 1px solid #96A9C4;
+        p{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+
+.footer {
+    background: #415165;
+    text-align: center;
+    padding: 31px 0 48px 0;
+    .copyrightLink{
+        a{
+            padding-right: 24px;
+        }
+    }
+}
